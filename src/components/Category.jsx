@@ -41,7 +41,7 @@ const Category = () => {
 
   return (
     <div className="container flex flex-row gap-6">
-      <div className="w-[400px] mt-4">
+      <div className="w-[400px] mt-3">
         <form
           className="flex flex-col gap-4 p-6 bg-white shadow-md rounded-md fixed md:static top-6 w-full md:w-[400px] mx-auto"
           onSubmit={handleCreateCategory}
@@ -170,7 +170,7 @@ const Category = () => {
       {isLoading && <h3>Loading...</h3>}
 
 
-      <div className="flex flex-wrap gap-4 mb-3 justify-center">
+      <div className="flex flex-wrap gap-4 my-3 justify-center">
         {data?.map((category) => (
           <div className="bg-gray-100 w-full sm:w-[300px] rounded-[20px] py-[20px] px-[20px] flex flex-col gap-4 shadow-md" key={category.id}>
             <img
