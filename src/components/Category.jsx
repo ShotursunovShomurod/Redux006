@@ -172,7 +172,7 @@ const Category = () => {
 
       <div className="flex flex-wrap gap-4 my-3 justify-center">
         {data?.map((category) => (
-          <div className="bg-gray-100 w-full sm:w-[300px] rounded-[20px] py-[20px] px-[20px] flex flex-col gap-4 shadow-md" key={category.id}>
+          <div className={`${category.gender === "male" ? "bg-green-400" : "bg-pink-400"} w-full sm:w-[300px] rounded-[20px] py-[20px] px-[20px] flex flex-col gap-4 shadow-md`} key={category.id}>
             <img
               className="w-full h-[200px] object-contain rounded-md"
               src={category.gender === "male" ? boy : girl}
@@ -196,9 +196,9 @@ const Category = () => {
                 <span className="font-semibold">Gender:</span>
                 <span>{category.gender}</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-col">
                 <span className="font-semibold">Bio:</span>
-                <span>{category.bio}</span>
+                <span title={category.bio} className="text-wrap w-[100%] line-clamp-2">{category.bio}</span>
               </div>
             </div>
 
