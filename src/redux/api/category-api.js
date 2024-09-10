@@ -9,6 +9,15 @@ export const categoryApi = api.injectEndpoints({
       }),
       providesTags:["Category"]
     }),
+    getPageCreate: build.query({
+      query: ({limit, page}) => ({ 
+        url: `category/?limit=${limit}&page=${page}`,
+      }),
+      providesTags:["Category"]
+    }),
+ 
+
+
     createCategory: build.mutation({
       query: (body)=> ({
         url:"/category",
@@ -35,4 +44,4 @@ export const categoryApi = api.injectEndpoints({
   }),
 });
 
-export const {useCreateCategoryMutation, useUpdateCategoryMutation, useDeleteCategoryMutation, useGetCategoryQuery} = categoryApi
+export const {useCreateCategoryMutation, useUpdateCategoryMutation, useDeleteCategoryMutation, useGetCategoryQuery, useGetPageCreateQuery} = categoryApi
