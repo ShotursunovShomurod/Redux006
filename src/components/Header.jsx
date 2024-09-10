@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-green-500 text-white py-4 shadow-md">
+    <header className="bg-green-500 text-white py-4 shadow-md sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo / Brand */}
         <div className="text-2xl font-bold">
