@@ -238,7 +238,7 @@ const Category = () => {
     </div>
     <div className="my-3 flex items-center gap-6 justify-center">
           <Button className="bg-green-500 text-white font-bold text-[20px]" disabled={page <= 1} onClick={()=> setPage((p)=>p - 1)}>BAKC</Button>
-          <p className="text-[18px] font-bold">{page} : <span className="text-[18px] font-bold">{Math.round(total / 4)}</span></p>
+          <p className="text-[18px] font-bold">{page} : <span className="text-[18px] font-bold">{Math.ceil(total / 4)}</span></p>
           <Button className="bg-green-500 text-white font-bold text-[20px]" disabled={page * 4>= total} onClick={()=> setPage((p)=>p + 1)}>NEXT</Button>
     </div>
           </>
